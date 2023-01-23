@@ -1,0 +1,26 @@
+Q: WHAT IS JSON ANST
+
+JSON stands for JavaScript Object Notation.
+JSON is a lightweight forest for storing and transporting date. JSON is often used when data is sent from a server to a web page.
+
+Q: WHAT IS HTTP STATUS CODES
+
+ANS: HTTP status code is used for search engine optimization of how your pages get indexed, as well as how search engines perceive the health of your site.
+Status codes are grouped as follows: 
+Informational responses (100-199)
+Successful responses (200-299) 
+Server error responses (500-599)
+Redirection messages (300-399) 
+Client error responses (400-499)
+
+Q: WHAT IS THE MEANING OF 580 STATUS CODES ?
+
+ANS The 500 HTTP Status Codes which means internal server error indicates that The server was unable to fulfill the request
+because of en unanticipated issue. In this case, the error message is a general "catch-all." 
+Typically, this implies that the server is unable to locate more appropriate 5xx error code.
+
+Q: WHAT IS NOSQL DATABASES ?
+
+ANS: NoSQL databases (aka "not only SQL") are non-tabular databases and store data differently than relational tables, 
+hos databases come in a variety of types based on their data model. The main types are decument, key-value wide-column, and graph. 
+They provide flexible schemes and scale. easily with large amounts of data and high user loads.
