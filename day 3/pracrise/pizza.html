@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <style>
+        body{
+            background: url(./pizza.jpg);
+        
+        
+        }
+        
+        .header-container{
+            background-color: lightpink;
+            max-width: 800px;
+            opacity: 0.9;
+        }
+        .container{
+               background-color: #f4f4f4;
+               max-width: 800px;
+               opacity: 0.9;
+        }
+        .footer-container{
+            max-width: 800px;
+            text-align: center;
+        }
+        .footer{
+            padding: 10px;
+            margin-bottom: 10px;
+            background: red;
+            border: 2px solid white;
+            color: white;
+        }
+        py-1{
+            padding: 10px;
+        }
+        ch-1{
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="header-container primary-color">
+        <h1>WELCOME TO ITALIAN PIZZA!</h1>
+        <h4>We deliver pizza in 40 minutes max. If not-Pizza's on us!</h4>
+    </div>
+    <div class="container">
+
+        <form action="register.php" method="get">
+            <fieldset>
+                <legend>
+    
+                </legend>
+                Email
+                <br>
+                <input type="email">
+                <br><br>
+                Phone
+                <input type="text" class="py-1" placeholder="Area">
+                <input type="text" class="py-1" placeholder="Local">
+                <input type="text" class="py-1" placeholder="Local">
+                <br><br>
+                Number of slices
+                <input type="number" class="py-2">
+                <br><br>
+                Pizza Size
+                <br>
+                <input type="checkbox" class="ch-1" name="s1"> 8-inch
+                <input type="checkbox" class="ch-1" name="s1"> 10-inch
+                <input type="checkbox" class="ch-1" name="s1"> 12-inch
+                <input type="checkbox" class="ch-1" name="s1"> 14-inch
+                <br><br>
+                Toppings
+                <br>
+                <input type="checkbox" class="ch-2" > Peppersoni
+                <input type="checkbox" class="ch-2" > Onions
+                <input type="checkbox" class="ch-2" > Mushrooms
+                <input type="checkbox" class="ch-2" > Sausage
+                <br><br>
+                <input type="checkbox" class="ch-2">I agree to the TERMS AND CONDITIONS
+            </fieldset>
+            <BR></BR>
+            <div class="footer-container">
+                <input class="footer" type="submit" value="Order Now">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

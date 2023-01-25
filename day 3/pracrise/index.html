@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Working with html forms</h3>
+
+    <form action="register.php" method="post"></form>
+    <fieldset>
+        <legend>User Registration</legend>
+        First Name : <input type="text" name="txtFanme">
+        <br><br>
+        Last Name : <input type="text" name="txtFanme">
+        <br><br>
+        Gender: <input type="radio" id="r1" name="r1"/> Male
+                <input type="radio" id="r2" name="r1"/> Female
+        <br><br>
+        Tech skills: <input type="checkbox" name="HTML5">
+        Tech skills: <input type="checkbox" name="CSS">
+        Tech skills: <input type="checkbox" name="Bootsrap">
+        <br><br>
+        Qualifications: 
+        <select name="s1" id="s1">
+        <option>B.Tech</option>
+        <option>M.Tech</option>
+    </select>
+    <br><br>
+    Address: <br>
+    <textarea name="txtaddress" id="txtaddress" cols="30" rows="5"></textarea>
+        <br><br>        
+        <input type="submit" value="Register" id="Register">
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        *{
+            
+            background-color: #f2f2f2;
+            font-size: medium;
+            color: green;
+        }
+        fieldset{
+            background-color: #fff;
+            max-width: 500px;
+        }
+        legend{
+            background-color: mediumaquamarine;
+            color: #fff;
+            padding: 5px;
+        }
+        .footer{
+            background-color: #f2f2f2;
+            color: darkblue;
+            text-align: center;  
+            font-size: 10px;
+            padding: 2px;
+        }
+        .footer h4{
+            font-size: 20px;
+
+        }
+        .complete{
+            text-align: center;
+            max-width: 500px;
+        }
+        .submit{
+            background-color: coral;
+            color: #fff;
+            border: 2px #fff solid;
+            font-weight: 100;
+            font-size: large;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        span{
+            font-size: small;
+            background-color: #fff;
+            color: lightgreen;
+
+        }
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <form action="register.php" method="get">
+    <fieldset>
+        <legend>This is secure 128-bit SSL Encrypted payment. You're safe.</legend>
+        Credit Card (Visa, Mastercard) <img width="10%" src="./visa.jpg" alt=""><input type="checkbox" name="mode"> 
+        <img width="10%" src="./mastercard.jpg" alt=""><input type="checkbox" id="c1" name="mode">
+        <br><br>
+        Card Number <span>The 16 digits on front of your card</span> <br> <input type="text" name="cardno">
+        <br><br>
+        Expiration date <br> <select value="Month" name="month" id="month">
+            <OPtion>Month</OPtion>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        /
+        <select name="year" id="year">
+            <option>YEAR</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+            <option>2031</option>
+        </select>
+        <br><BR>
+        CVV2/CVC2
+        <BR>
+        <input type="password"><span class="fy-1">The last 3 digits displayed on the back of your card</span>
+        <br><br>
+        Full Name on a Card
+        <br>
+        <input  type="text" id="holdername">
+        <br><br>
+        <div class="footer">
+            <h4>You will be charged $29.00 every month</h2>
+        </div>
+        </fieldset>
+        <br>
+        <div class="complete">
+
+            <input class="submit"  type="submit" value="Complete Transaction">
+        </form>
+        </div>
+    
+</body>
+</html>

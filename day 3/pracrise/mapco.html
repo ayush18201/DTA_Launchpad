@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<h2>Getting Coordinates using JavaScript</h2>
+<hr/>
+
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img   onmousemove="getCoords(event)"
+			src="./ImageMap_Task_Technologies.png.crdownload" 
+			alt="Workplace" 
+			usemap="#workmap" 
+			width="400" height="379"  />
+			
+<h1 id="head1"></h1>
+
+ 
+ <script>
+	function   getCoords(e)
+	{
+		var obj = document.getElementById("head1");
+		obj.innerText  = "X = " + e.clientX + ",  Y = " + e.clientY;
+	}	
+ </script>
+ <map name="workmap">
+     <area shape="rect" coords="8,214,108,454" href="https://jquery.com" alt="">
+     <area shape="rect" coords="138,196,266,470" href="https://angular.io" alt="">
+     <area shape="rect" coords="294,212,399,446" href="https://getbootstrap.com" alt="">
+     
+ </map>
+
+</body>
+</html>
