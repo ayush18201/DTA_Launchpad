@@ -1,0 +1,17 @@
+Assignments
+~~~~~~~~~~~
+1. Can we apply more than one css class to html tags?  If yes, how to implement?
+Yes, we can do it
+Example:
+<div class="container square">
+
+2.  How to hide an element using CSS?
+By using display: none or opacity: 0
+
+3. How to implement following requirements in CSS3 (As per the image):
+		a. Apply space between words
+		b. Apply space between letters
+		c. Apply shadow for each character in the text
+		d. Other requirements as per the image
+4.  Create  a web page to prepare image gallery. Apply required CSS styles.
+5. Create web page to apply animation based on the position. Object should move from left to right. 
