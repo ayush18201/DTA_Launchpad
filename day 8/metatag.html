@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div itemscope itemtype="https://schema.org/Hotel">
+  <h1><span itemprop="name">ACME Hotel Innsbruck</span></h1>
+  <img  itemprop="logo" src="https://th.bing.com/th?id=OIP.ADv616tm5yCvsbZ7lRozXwHaGG&w=275&h=226&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="hotel logo" />
+  <br>
+  <span style="width: 500px; text-align: center; font-size: large;" itemprop="description">My Logo</span>
+</div>  
+<br>
+
+<h1>URL</h1>
+<div itemscope itemtype="https://schema.org/Person">
+    <img src="https://th.bing.com/th/id/OIP.mEma0ZcipymPAHIYoIuFiAHaJa?pid=ImgDet&rs=1" itemprop="image" alt="Photo of Jane Doe"/>
+    <br>
+    <span itemprop="name">Ayushman Agrawal</span>
+  <br>
+    <span itemprop="jobTitle">Professor</span>
+    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="streetAddress">
+        20341 Whitworth Institute
+        405 N. Whitworth
+      </span>
+      <span itemprop="addressLocality">Seattle</span>,
+      <span itemprop="addressRegion">WA</span>
+      <span itemprop="postalCode">98052</span>
+    </div>
+    <span itemprop="telephone">(425) 123-4567</span>
+    <a href="mailto:jane-doe@xyz.edu" itemprop="email">
+      jane-doe@xyz.edu</a>
+  
+    Jane's home page:
+    <a href="http://www.janedoe.com" itemprop="url">janedoe.com</a>
+  
+    Graduate students:
+    <a href="http://www.xyz.edu/students/alicejones.html" itemprop="colleague">
+      Alice Jones</a>
+    <a href="http://www.xyz.edu/students/bobsmith.html" itemprop="colleague">
+      Bob Smith</a>
+  </div>
+  <br>
+  <div itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">Ayushman Agrawal</span>
+    <br>
+    <img src="https://th.bing.com/th/id/OIP.kXDj-Ht6BVuzdFcz7P0rtQHaE7?pid=ImgDet&rs=1" itemprop="image" alt="Photo of Jane Doe"/>
+    </div>
+    <div itemscope itemtype="https://schema.org/Place">
+        <h1>What is the latitude and longitude of the <span itemprop="name">Fairmount Building</span>?</h1>
+        Answer:
+        <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+          Latitude: 40 deg 44 min 54.36 sec N
+          Longitude: 73 deg 59 min 8.5 dec W
+          <meta itemprop="latitude" content="40.75" />
+          <meta itemprop="longitude" content="-73.98" />
+        </div>
+      </div>
+      <div itemscope itemtype="https://schema.org/Movie">
+
+        <h1 itemprop="name">Pirates of the Carribean: On Stranger Tides (2011)</h1>
+        <span itemprop="description">Jack Sparrow and Barbossa embark on a quest to
+         find the elusive fountain of youth, only to discover that Blackbeard and
+         his daughter are after it too.</span>
+        Director:
+         <div itemprop="director" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">Rob Marshall</span>
+        </div>
+        <div itemscope itemtype="https://schema.org/Recipe">
+            <h1>Recipe</h1>
+            Ingredients:
+            - <span itemprop="recipeIngredient">3 or 4 ripe bananas, smashed</span>
+            - <span itemprop="recipeIngredient">1 egg</span>
+            - <span itemprop="recipeIngredient">3/4 cup of sugar</span>
+        </div>
+        <div itemscope itemtype="https://schema.org/Restaurant">
+            <h1>Restautant Reviews</h1>
+            <span itemprop="name">GreatFood</span>
+          
+            <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+              <span itemprop="ratingValue">4</span> stars -
+              based on <span itemprop="reviewCount">250</span> reviews
+            </div>
+            </div>
+</body>
+</html>

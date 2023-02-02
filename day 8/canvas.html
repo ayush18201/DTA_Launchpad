@@ -1,0 +1,39 @@
+<!-- Draw the shapes using canvas tag -->
+<!DOCTYPE html>
+<html  >
+	<head> </head>
+	<body>
+	<h3>Marks </h3>
+		<hr/>	 
+		
+		<input type="button"  onclick="fn_drawGraphics()"  value="Draw Graphics" />
+		<br/> <br/>
+		
+		<canvas  id="canvas1"  width="300"  height="300"  style="border:2px solid blue;">
+		</canvas>
+		
+		<script>		 		
+			function  fn_drawGraphics()
+			{
+				var  c1 =  document.getElementById("canvas1");
+				var ctx  =  c1.getContext("2d");
+				
+				var x = 10,  y = 300, h = 40 ,  w = 20;
+				
+				var  arr = [ -280,-40,-150,-260,-60,-190,-100,-240,-290];
+				
+				for(var i = 0;  i <  arr.length; i++)
+				{
+					h = arr[i];
+					ctx.beginPath();
+					ctx.fillStyle = "blue";
+					ctx.fillRect(x,y, w, h);
+					x =  x +  30;					 
+				}
+				
+			
+								 
+			}
+		</script>				
+	</body>	
+</html>
