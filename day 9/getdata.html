@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Get Data" onclick="fn_getData()">
+    <p  id="p1"></p>
+    <h1 id="id"> ID : </h1>
+    <h1 id="email"> Email : </h1>
+    <h1 id="first_name"> First Name : </h1>
+    <h1 id="last_name"> Last Name : </h1>
+    <h1 >  Avatar : <img id="avatar" src="" alt=""></h1>
+    
+
+    <script>
+        var flag = false
+        
+        function fn_getData()
+        {
+            if(!flag){
+                var  str  =    '{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+    
+                var obj = JSON.parse(str);			
+                            
+                        // var paraObj =  document.getElementById("p1");
+                        //   paraObj.innerHTML = str;
+    
+                        
+                          var id = document.getElementById("id");
+                          id.innerHTML+=obj.id;
+                          console.log(obj);
+                        
+                          
+                          var email = document.getElementById("email");
+                          email.innerHTML+=obj.email;
+                          console.log(obj);
+                        
+                          
+                
+                          first_name.innerHTML+=obj.first_name;
+                          console.log(obj);
+                        
+                          var last_name = document.getElementById("last_name");
+                          last_name.innerHTML+=obj.last_name;
+                          console.log(obj);
+                          
+                          var avatar = document.getElementById("avatar");
+                          avatar.src=obj.avatar;
+                          console.log(obj);
+
+                          flag = true;
+            }
+                    
+                      
+                    
+
+												
+        }
+    </script>
+    
+</body>
+</html>

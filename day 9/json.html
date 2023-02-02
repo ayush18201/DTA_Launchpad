@@ -1,0 +1,111 @@
+<html>
+	<head></head>
+	
+	<body>
+		<h3>Working with JSON</h3>
+		<hr/>
+		
+		
+		<fieldset>
+			<legend></legend>
+			
+			Empno :  <input type="text"    id="eno"  name="eno" autofocus />
+			<br/><br/>
+			
+			Ename :  <input type="text"   id="ename"  name="ename"  />
+			<br/><br/>
+			
+			Job :  <input type="text"   id="ejob"  name="ejob"  />
+			<br/><br/>
+			
+			Salary :  <input type="text"   id="esalary"  name="esalary"  />
+			<br/><br/>
+			
+			Deptno :  <input type="text"   id="dno"  name="dno"  />
+			<br/><br/>
+			
+			<input type="button"  value="Convert to JSON"   onclick="fn_saveData()" />
+			
+		</fieldset>
+		
+		<br/><br/>
+			<p  id="p1"></p>
+	
+		<script>
+		
+		
+				
+				function  fn_saveData()
+				{
+						 // 1.  Get data from input fields 			
+						var  txtenoObj =  document.getElementById("eno");	
+						var  txtenameObj =  document.getElementById("ename");	
+						var  txtejobObj =  document.getElementById("ejob");						
+						var  txtesalaryObj =  document.getElementById("esalary");						
+						var  txtdnoObj =  document.getElementById("dno");						
+				
+						 
+						 // 2.  Create object with input fields values 					
+						var  userObj =  { };
+						userObj.eno =  txtenoObj.value; 
+						userObj.ename =  txtenameObj.value; 
+						userObj.ejob =  txtejobObj.value; 
+						userObj.esalary =  txtesalaryObj.value; 
+						userObj.dno =  txtdnoObj.value; 
+					// 	alert(userObj);
+
+						 
+						 // 3. Convert the object into JSON string				
+						var  str  =  JSON.stringify( userObj );
+				//		alert(str);
+
+						
+						 // 4.  Store the string in localStorage	
+						localStorage.setItem("userData",  str);
+
+						alert("User details are stored in localStorage");
+                        fn_getData();
+
+
+                function fn_getData()
+				{
+						// 1.  Reading data from localStorage		
+						var  str =  localStorage.getItem("userData");			
+						
+					var paraObj =  document.getElementById("p1");
+					  paraObj.innerHTML = str;
+												
+				 
+				 
+					// 2.  Convert JSON string into object				
+					  var  userObj =  JSON.parse(str);
+					
+										
+					// 3.  Access html elements to display user data
+					
+					if(  str ==  null )
+					{
+							alert("There is no user data in localStorage");							
+							return;   //  exit from the function 
+					}
+					
+					var  txtUidObj =  document.getElementById("uid");	
+					var  txtEmailObj =  document.getElementById("email");	
+					var  txtTokenObj =  document.getElementById("token");		
+					 
+					txtUidObj.value =  	 userObj.uid;
+					txtEmailObj.value =  	 userObj.email;
+					txtTokenObj.value =  	 userObj.token;					 
+				}	        
+				}
+			
+				
+		
+							
+		
+		</script>
+		
+		
+	</body>
+
+</html>

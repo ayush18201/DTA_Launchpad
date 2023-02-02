@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend></legend>
+        
+        Empno :  <input type="text"    id="eno"  name="eno" autofocus />
+        <br/><br/>
+        
+        Ename :  <input type="text"   id="ename"  name="ename"  />
+        <br/><br/>
+        
+        Job :  <input type="text"   id="ejob"  name="ejob"  />
+        <br/><br/>
+        
+        Salary :  <input type="text"   id="esalary"  name="esalary"  />
+        <br/><br/>
+        
+        Deptno :  <input type="text"   id="dno"  name="dno"  />
+        <br/><br/>
+        
+        <input type="button"  value="Convert to JSON"   onclick="fn_saveData()" />
+        <fieldset>
+			<input type="button"  value="Get User Data"   onclick="fn_getData()" />
+			
+			<p  id="p1"></p>
+			
+			
+		</fieldset>
+    </fieldset>
+    <script>
+        var employeearr=[]
+        console.log(employeearr)
+
+        function fn_saveData(){
+            if(localStorage.getItem(employeearr)){
+
+                var  txtenoObj =  document.getElementById("eno");	
+						var  txtenameObj =  document.getElementById("ename");	
+						var  txtejobObj =  document.getElementById("ejob");						
+						var  txtesalaryObj =  document.getElementById("esalary");						
+						var  txtdnoObj =  document.getElementById("dno");	
+                    // 2.  Create object with input fields values 					
+						var  userObj =  {};
+						userObj.eno =  txtenoObj.value; 
+						userObj.ename =  txtenameObj.value; 
+						userObj.ejob =  txtejobObj.value; 
+						userObj.esalary =  txtesalaryObj.value; 
+						userObj.dno =  txtdnoObj.value;
+                        
+                        var str = localStorage.getItem(employeearr);
+                        var allemployees = JSON.parse(str)
+                        allemployees.push(userObj);
+
+                        var newstr = JSON.stringify(allemployees);
+                        localStorage.setItem("employeedata", newstr);
+                        alert("employee details are stored in local storage")
+
+
+
+            }
+            else{
+                        var  txtenoObj =  document.getElementById("eno");	
+						var  txtenameObj =  document.getElementById("ename");	
+						var  txtejobObj =  document.getElementById("ejob");						
+						var  txtesalaryObj =  document.getElementById("esalary");						
+						var  txtdnoObj =  document.getElementById("dno");
+
+                        // 2.  Create object with input fields values 					
+						var  userObj =  { };
+						userObj.eno =  txtenoObj.value; 
+						userObj.ename =  txtenameObj.value; 
+						userObj.ejob =  txtejobObj.value; 
+						userObj.esalary =  txtesalaryObj.value; 
+						userObj.dno =  txtdnoObj.value; 
+                
+					// 	alert(userObj);
+
+						 employeearr.push(userObj)
+						 // 3. Convert the object into JSON string				
+						var  str  =  JSON.stringify( employeearr );
+                        localStorage.setItem("employeedata", str)
+				//		alert(str);
+                        alert("Employee details are stored in localStorage");
+                        }
+
+						
+						
+
+        }
+        function fn_getData()
+				{
+						// 1.  Reading data from localStorage		
+						var  str =  localStorage.getItem("employeedata");			
+						
+					var paraObj =  document.getElementById("p1");
+					  paraObj.innerHTML = str;
+												
+				 
+						 
+				}	        
+				
+
+        
+    </script>
+</body>
+</html>
